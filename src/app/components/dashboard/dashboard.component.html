@@ -1,0 +1,33 @@
+<div class="dashboard-wrapper">
+  <header class="header">
+    <div class="header-content">
+      <h1 class="logo">DSCI Demo</h1>
+      <button class="logout-btn" (click)="onLogout()">Logout</button>
+    </div>
+  </header>
+
+  <div class="dashboard-content" *ngIf="!isLoading && currentUser">
+    <div class="welcome-section">
+      <h2>Welcome, {{ currentUser.name }}!</h2>
+      <div class="user-info">
+        <div class="info-card">
+          <label>Name:</label>
+          <p>{{ currentUser.name }}</p>
+        </div>
+        <div class="info-card">
+          <label>Email:</label>
+          <p>{{ currentUser.email }}</p>
+        </div>
+        <div class="info-card">
+          <label>User ID:</label>
+          <p>{{ currentUser.userId }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="loading-section" *ngIf="isLoading">
+    <div class="spinner"></div>
+    <p>Loading...</p>
+  </div>
+</div>
