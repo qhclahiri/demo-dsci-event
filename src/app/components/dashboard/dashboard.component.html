@@ -2,7 +2,10 @@
   <header class="header">
     <div class="header-content">
       <h1 class="logo">DSCI Demo</h1>
-      <button class="logout-btn" (click)="onLogout()">Logout</button>
+      <div class="header-actions">
+        <button class="admin-btn" routerLink="/consent-admin">Consent Admin</button>
+        <button class="logout-btn" (click)="onLogout()">Logout</button>
+      </div>
     </div>
   </header>
 
